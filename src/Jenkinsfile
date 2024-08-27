@@ -1,0 +1,23 @@
+pipeline{
+    agent any
+    tools{
+        maven"maven-default"
+    }
+    stages{
+        stage ("checkout"){
+            steps{
+                echo "this is the checkout stage"
+            }
+        }
+        stage("build"){
+            steps{
+                echo "this is the build stage"
+            }
+        }
+        stage("deploy"){
+            steps{
+                echo "this is the deploy stage"
+            }
+        }
+    }
+}
